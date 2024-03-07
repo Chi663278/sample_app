@@ -37,6 +37,6 @@ class ListsController < ApplicationController
   private #ここから下はこのcontrollerの中でしか呼び出せません
   # ストロングパラメータ
   def list_params
-    params.require(:list).permit(:title, :body)
+    params.require(:list).permit(:title, :body, :image)
   end
 end
