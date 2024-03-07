@@ -8,11 +8,18 @@
     <%= link_to list.title, list_path(list.id) %>
   </span>
 
-  <p>画像</p><!-- listに紐づくimageを HTMLのimgタグを生成するimage_tagヘルパーにわたす-->
-  <% if list.image.attached? %><!-- list.imageに対して imageが存在するかメソッドで確認している>
+
+  <p>画像</p>
+  <%= image_tag list.image, size: "200x200" %>
+
+
+<!-- 以下削除
+ listに紐づくimageを HTMLのimgタグを生成するimage_tagヘルパーにわたす
+  <% if list.image.attached? %>list.imageに対して imageが存在するかメソッドで確認している
     <%= image_tag list.image, size: "200x200" %>
   <% else %>
     <%= image_tag 'no_image', size: "200x200" %>
   <% end %>
+-->
 
 <% end %>
